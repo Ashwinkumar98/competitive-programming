@@ -3,6 +3,7 @@
 #include<string.h>
 #include<stdbool.h>
 //Count No of Island
+int max=0;
 bool isvaild(int r,int c,int mat[5][5],bool visited[5][5]){
     return (r>=0 && c>=0 && r<5 && c<5 && (mat[r][c] && !visited[r][c]));
 }
@@ -10,13 +11,19 @@ bool isvaild(int r,int c,int mat[5][5],bool visited[5][5]){
 void DFS(int row,int col,int mat[5][5],bool visited[5][5]){
 
     int i;
+    static int cnt=0;
     static int rowK[]={-1,-1,-1,0,0,1,1,1};
     static int colK[]={-1,0,1,-1,1,-1,0,1};
     visited[row][col]=true;
     for(i=0;i<8;i++){
         if(isvaild(row+rowK[i],col+colK[i],mat,visited)){
+            cnt++;
             DFS(row+rowK[i],col+colK[i],mat,visited);
         }
+    }
+
+    if(max<cnt){
+        max=cnt;
     }
 }
 
@@ -36,8 +43,8 @@ void CountIsland(int r,int c,int mat[r][c]){
         }
     }
 
-    printf("%d",count);
-
+    printf("cnt : %d\n",count);
+    printf("max_island : %d",max-1);
 }
 
 int main(){
@@ -48,5 +55,6 @@ int main(){
                      { 0, 0, 0, 0, 0 },
                      { 1, 0, 1, 0, 1 } };
     CountIsland(5,5,M);
+
     return 0;
 }
