@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-
+//Heap Sort
 void swap(int arr[],int a,int b){
 
     int tmp;
@@ -38,9 +38,10 @@ void PrintHeap(int arr[],int n){
     printf("\n");
 }
 int main(){
-    int i, arr[]={1,2,3,4,5,6};
+    int i, arr[]={7,8,10,12,67,33};
     for(i=2;i>=0;i--){
         Heapify(arr,6,i);
+
     }
     PrintHeap(arr,6);
     for(i=5;i>=0;i--){

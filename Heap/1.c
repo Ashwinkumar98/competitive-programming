@@ -75,9 +75,7 @@ int main(){
     InsertValue(100);
     InsertValue(200);
     InsertValue(500);
-    InsertValue(40);
-    InsertValue(33);
-    InsertValue(105);
+
     printHeap();
     Deletion();
     printHeap();

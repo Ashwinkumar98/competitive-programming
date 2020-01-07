@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-
+//print leaf node
 struct node{
     int x;
     struct node *left;

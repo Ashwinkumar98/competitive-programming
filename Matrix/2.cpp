@@ -4,7 +4,7 @@
 #include<string.h>
 #define ROW 9
 #define COL 10
-
+//find shortest path between two points
 using namespace std;
 
 struct Point {
@@ -79,8 +79,8 @@ int main()
         { 1, 1, 0, 0, 0, 0, 1, 0, 0, 1 }
     };
 
-    Point src = {4, 0};
-    Point dest = {8, 9};
+    Point src = {0, 0};
+    Point dest = {4, 4};
     int dist = FindPath(src,dest,mat);
 
     if(dist==-1){

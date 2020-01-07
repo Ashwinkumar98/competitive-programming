@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-
+//Lowest common ancestor
 struct node {
     int x;
     struct node *left;

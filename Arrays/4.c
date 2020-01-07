@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-
+//segregate 0's and 1's
 void segrate(int a[],int n)
 {
     int i,l=0,r=n-1;

@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-
+//infix to prefix
 int top=-1;
 char arr[10000];
 void push(char x,int n){
